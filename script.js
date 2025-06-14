@@ -11,7 +11,8 @@ const noTexts = [
     "要不再想想？", 
     "不许选这个！ ", 
     "我会很伤心…", 
-    "不行:("
+    "不行:(",
+    "装逼我让你飞起来"
 ];
 
 // No 按钮点击事件
@@ -32,16 +33,17 @@ noButton.addEventListener("click", function() {
     questionText.style.transform = `translateY(-${moveUp}px)`;
 
     // No 文案变化（前 5 次变化）
-    if (clickCount <= 5) {
+    if (clickCount <= 6) {
         noButton.innerText = noTexts[clickCount - 1];
     }
 
     // 图片变化（前 5 次变化）
-    if (clickCount === 1) mainImage.src = "images/shocked.png"; // 震惊
-    if (clickCount === 2) mainImage.src = "images/think.png";   // 思考
-    if (clickCount === 3) mainImage.src = "images/angry.png";   // 生气
-    if (clickCount === 4) mainImage.src = "images/crying.png";  // 哭
-    if (clickCount >= 5) mainImage.src = "images/crying.png";  // 之后一直是哭
+    if (clickCount === 1) mainImage.src = "images/chicken/1.png"; // 震惊
+    if (clickCount === 2) mainImage.src = "images/chicken/2.png";   // 思考
+    if (clickCount === 3) mainImage.src = "images/chicken/3.png";   // 生气
+    if (clickCount === 4) mainImage.src = "images/chicken/4.png";  // 哭
+    if (clickCount === 5) mainImage.src = "images/chicken/5.png";  // 之后一直是哭
+    if (clickCount >= 6) mainImage.src = "images/chicken/10.png";  // 之后一直是哭
 
 });
 
@@ -49,8 +51,8 @@ noButton.addEventListener("click", function() {
 yesButton.addEventListener("click", function() {
     document.body.innerHTML = `
         <div class="yes-screen">
-            <h1 class="yes-text">!!!好儿子!! ( >᎑<)♡︎ᐝ</h1>
-            <img src="images/hug.png" alt="拥抱" class="yes-image">
+            <h1 class="yes-text">!!!好儿子!为父果然没看错你! ( >᎑<)♡︎ᐝ</h1>
+            <img src="images/chicken/6.png" alt="拥抱" class="yes-image">
         </div>
     `;
 
